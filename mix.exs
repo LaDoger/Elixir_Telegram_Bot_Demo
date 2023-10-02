@@ -25,7 +25,8 @@ defmodule TelegramAnnouncementBot.MixProject do
       # {:dep_from_git, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
         {:httpoison, "~> 1.8"},
         {:poison, "~> 4.0"},
-        {:logger_file_backend, "~> 0.0.10"}
+        {:logger_file_backend, "~> 0.0.10"},
+        {:dotenv, "~> 3.0.0"}
     ]
   end
 end

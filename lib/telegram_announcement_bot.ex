@@ -19,14 +19,18 @@ defmodule TelegramBot do
   end
 
   def test_announcement do
+
+    # Load environment variables from `.env`
+    Dotenv.load()
+
     # Get Telegram Bot Token created from https://t.me/BotFather
-    token = ""
+    telegram_bot_token = System.get_env("TELEGRAM_BOT_TOKEN")
 
     # If your Telegram Channel URL is https://t.me/doge, then CHANNEL_ID = '@doge'
-    chat_id = ""
+    channel_id = System.get_env("CHANNEL_ID")
 
-    message = "Elixir wow wow wow!"
+    message = "omg wow amazing doge"
 
-    send_message(token, chat_id, message)
+    send_message(telegram_bot_token, channel_id, message)
   end
 end
