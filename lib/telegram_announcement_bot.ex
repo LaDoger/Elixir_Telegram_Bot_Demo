@@ -19,7 +19,6 @@ defmodule TelegramBot do
   end
 
   def test_announcement do
-
     # Load environment variables from `.env`
     Dotenv.load()
 
@@ -29,8 +28,10 @@ defmodule TelegramBot do
     # If your Telegram Channel URL is https://t.me/doge, then CHANNEL_ID = '@doge'
     channel_id = System.get_env("CHANNEL_ID")
 
-    message = "omg wow amazing doge"
+    # What you want the bot to announce
+    message = "This message was sent using Elixir!"
 
     send_message(telegram_bot_token, channel_id, message)
   end
+
 end
